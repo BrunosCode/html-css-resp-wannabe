@@ -72,10 +72,21 @@ img {
   clear: both;
 }
 
+
+
+
 @media screen and (max-width: 420px) {
+  body {
+    margin: 0;
+    padding: 0;
+  }
+
   .row {
     width: 90%;
-    margin-top: 2rem;
+    margin-top: 0;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 2rem 0;
   }
 
   /* BLOCCO LEZIONI  */
@@ -87,4 +98,24 @@ img {
   #lezioni .row>.right {
     margin-top: 2rem;
   }
+
+  /* BLOCCO STEPS  */
+  #steps .row>.left,
+  #steps .row>.central,
+  #steps .row>.right {
+  float: none;
+  width: 100%;
+  margin: 2rem 0;
+  }
+
+  /* BLOCCO PERCHE */
+  #why .row>.first,
+  #why .row>.second,
+  #why .row>.third {
+  width: 100%;
+  margin: 2rem 0;
+    }
+    #why hr {
+      margin-top: 2rem;
+    }
 }
