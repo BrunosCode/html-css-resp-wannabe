@@ -14,6 +14,7 @@
 
 #lezioni .row img {
   /* per centrare orizzontalmente */
+  /* CRIMINALE  */
   display: block;
   margin-right: auto;
   margin-left: auto;
@@ -73,12 +74,32 @@ img {
 }
 
 
-
-
-@media screen and (max-width: 420px) {
+@media screen and (max-width: 1100px) {
+  
+  /* COMMON  */
   body {
     margin: 0;
     padding: 0;
+  }
+  
+  /* DIVIDING CONTENT IN SORT OF COLUMNS  */
+  img {
+    float: left;
+    margin-right: 10%;
+    }
+    .row div:nth-of-type(2) > img {
+      float: right;
+      margin-right: 0;
+      margin-left: 10%;
+    }
+    #lezioni .row img {
+    display: inline-block;
+    margin-right: 10%;
+    margin-left: 0;
+    }
+    #lezioni .row div:nth-of-type(2) img {
+    margin-right: 0;
+    margin-left: 10%;
   }
 
   .row {
@@ -87,16 +108,29 @@ img {
     margin-left: auto;
     margin-right: auto;
     padding: 1rem 0;
+    }
+    .row > div {
+      content: '';
+      display: table;
+      clear: both;
   }
+
+  h3 {
+    margin-top: 50px;
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+  }
+
+
 
   /* BLOCCO LEZIONI  */
   #lezioni .row>.left,
   #lezioni .row>.right {
   width: 100%;
   float: none;
-  }
-  #lezioni .row>.right {
-    margin-top: 2rem;
+    }
+    #lezioni .row>.right {
+      margin-top: 2rem;
   }
 
   /* BLOCCO STEPS  */
@@ -117,16 +151,62 @@ img {
     }
     #why hr {
       margin-top: 2rem;
+      clear: both;
     }
     #why .row img {
       background-color: #428bca;
       border-radius: 50%;
-      padding: 1rem;
-      width: 30%;
+      height: 140px;
+      margin-bottom: 2rem;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  img {
+    height: 160px;
   }
 
+  h3 {
+    margin-top: 1rem;
+    font-size: 1.25rem;
+    margin-bottom: .5rem;
+  }
+
+  #why .row img {
+    height: 120px;
+    padding: 20px;
+  }
+}
+  
+@media screen and (max-width: 600px) {
   img {
+    float: none;
     height: auto;
     width: 40%;
+    margin-right: 0;
+    }
+    .row div:nth-of-type(2) > img {
+      float: none;
+      margin-right: 0;
+      margin-left: 0;
+    }
+    #lezioni .row img {
+      display: inline-block;
+      margin-right: 0;
+      margin-left: 0;
+    }
+    #lezioni .row div:nth-of-type(2) img {
+    margin-right: 0;
+    margin-left: 0;
+  }
+
+  h3 {
+    margin-top: 0;
+  }
+
+  #why .row img {
+    width: 30%;
+    height: auto;
+    padding: 1rem;
   }
 }
